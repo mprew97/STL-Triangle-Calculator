@@ -20,6 +20,12 @@ const hasVertex = (line: Array<string>): boolean => {
     }
 }
 
+const isTriangle = (vertices: Array<Vertex>): boolean => {
+    if (vertices.length === 3) {
+        return true;
+    }
+}
+
 const calculate3dArea = (v1: Vertex, v2: Vertex, v3: Vertex): number => {
     const vector1 = new Vector3(v1.x, v1.y, v1.z);
     const vector2 = new Vector3(v2.x, v2.y, v2.z);
@@ -46,7 +52,7 @@ async function processLineByLine(file) {
             const y = parseFloat(words[words.length - 2]);
             const z = parseFloat(words[words.length - 3]);
             vertexArray.push({x, y, z});
-            if (vertexArray.length === 3) {
+            if (isTriangle(vertexArray)) {
                 const area = calculate3dArea(vertexArray[0], vertexArray[1], vertexArray[2]);
                 totalArea += area;
                 vertexArray = [];
