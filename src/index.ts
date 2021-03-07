@@ -37,8 +37,8 @@ const calculate3dArea = (v1: Vertex, v2: Vertex, v3: Vertex): number => {
 
 }
 
-async function processLineByLine(file) {
-    const fileStream = fs.readFileSync(file, "utf-8");
+const processLineByLine = (filePath) => {
+    const fileStream = fs.readFileSync(filePath, "utf-8");
 
     let count: number = 0;
     let totalArea: number = 0;
@@ -64,8 +64,8 @@ async function processLineByLine(file) {
   };
 
   const main = async () => {
-    const stlTestData = await processLineByLine(path.resolve(__dirname, "./assets/Test.stl"));
-    const stlMoonData = await processLineByLine(path.resolve(__dirname, "./assets/Moon.stl"));
+    const stlTestData = processLineByLine(path.resolve(__dirname, "./assets/Test.stl"));
+    const stlMoonData = processLineByLine(path.resolve(__dirname, "./assets/Moon.stl"));
 
     console.log({ stlTestData, stlMoonData });
   }
