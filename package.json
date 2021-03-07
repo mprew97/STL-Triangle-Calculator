@@ -1,0 +1,24 @@
+{
+  "name": "stl",
+  "version": "1.0.0",
+  "description": "STL Project for Fast-Radius",
+  "main": "index.js",
+  "scripts": {
+    "test": "",
+    "lint": "eslint --ext .js,.ts"
+  },
+  "keywords": [
+    "STL"
+  ],
+  "author": "mitch prewitt",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^14.14.31",
+    "@typescript-eslint/parser": "^4.16.1",
+    "typescript": "^3.9.9"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.16.1",
+    "three": "^0.126.1"
+  }
+}
