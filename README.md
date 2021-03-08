@@ -4,9 +4,8 @@ STL File Parser is a small project for calculating both the number of triangles 
 STL object based.
 
 ## Dependencies
-- NPM
-- Node.js
-- npx
+- Node.js https://nodejs.org/en/download/
+- Typescript https://www.typescriptlang.org/download
 
 ## Installation
 
